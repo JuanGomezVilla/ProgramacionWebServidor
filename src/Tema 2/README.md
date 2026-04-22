@@ -1,8 +1,6 @@
 ## Creación
 1. Crear el proyecto, instalar *chalk* para la consola:
     ```bash
-    mkdir practica-1
-    cd practica-1
     npm init -y
     npm install chalk@4
     ```
