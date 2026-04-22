@@ -1,0 +1,16 @@
+{
+  "name": "tema-2",
+  "version": "1.0.0",
+  "description": "1. Crear el proyecto, instalar *chalk* para la consola:\r     ```bash\r     mkdir practica-1\r     cd practica-1\r     npm init -y\r     npm install chalk@4\r     ```\r 2. Crear dos archivos:\r     - ***app.js*:** contiene el código a ejecutar desde la consola\r     - ***gestorEventos.js*:** código que gestiona los eventos, importado por *app.js*",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
