@@ -40,3 +40,29 @@ exports.getProductById = (req, res) => {
     if(!product) return res.status(404).json({ message: "Product not found" });
     res.json(product);
 };
+
+
+
+//Method to delete product
+exports.deleteProduct = async (req, res) => {
+    try {
+        const deleted = await Product.delete(parseInt(req.params.id));
+        if(!deleted) return res.status(404).json({ message: "Product not found" });
+        res.json({ message: "Product deleted successfully" });
+    } catch(error){
+        res.status(500).json({ message: "Error deleting product", error });
+    }
+};
+
+
+
+//Method to delete product
+exports.modifyProduct = async (req, res) => {
+    try {
+        const modified = await Product.modify(parseInt(req.params.id), req.params.name);
+        if(!modified) return res.status(404).json({ message: "Product not found" });
+        res.json({ message: "Product updated successfully" });
+    } catch(error){
+        res.status(500).json({ message: "Error updating product", error });
+    }
+};

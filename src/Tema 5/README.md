@@ -6,6 +6,7 @@
     npm init -y
     npm install express
     npm install express-validator
+    npm install jsonwebtoken
     ```
 2. Generar estructura:
     ```bash

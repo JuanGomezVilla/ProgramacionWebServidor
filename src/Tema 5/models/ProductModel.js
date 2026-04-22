@@ -32,6 +32,20 @@ class Product {
         this.products.push(newProduct);
         return newProduct;
     }
+
+    static delete(id){
+        const index = Product.products.findIndex(product => product.id === id);
+        if (index === -1) return false;
+        Product.products.splice(index, 1);
+        return true;
+    }
+
+    static modify(id, newName){
+        const product = Product.products.find(p => p.id === id);
+        if (!product) return null;
+        product.name = newName;
+        return product;
+    }
 }
 
 //Create three random products
