@@ -16,6 +16,22 @@ class Product {
         //Search for a specific product by ID
         return Product.products.find(product => product.id === id);
     }
+
+    static findOne(query) {
+        if(query.name){
+            return Product.products.find(
+                product => product.name.toLowerCase() === query.name.toLowerCase()
+            );
+        }
+        return null;
+    }
+
+    static create(json){
+        const nextId        = this.products[this.products.length - 1].id + 1;
+        const newProduct    = new Product(nextId, json.name, json.price);
+        this.products.push(newProduct);
+        return newProduct;
+    }
 }
 
 //Create three random products

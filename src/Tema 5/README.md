@@ -5,6 +5,7 @@
     ```bash
     npm init -y
     npm install express
+    npm install express-validator
     ```
 2. Generar estructura:
     ```bash
@@ -20,4 +21,5 @@
 3. Ejecutar:
     ```bash
     node app.js
+    node --watch app.js
     ```
